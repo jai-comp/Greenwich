@@ -1143,53 +1143,6 @@ function fillSchool(frmObj, thisForm, servicePath) {
     //alert(url);
     makeRequest(url, frmObj, 'fillSchool');
 }
-////////////////////////////////////////
-function getDept(thisForm, servicePath) {
-    //alert('getDept');
-    fillDept(thisForm.display_dept, thisForm, servicePath);
-}
-
-function fillDept(frmObj, thisForm, servicePath) {
-    // This function executes the makeRequest function that 
-    // connects to the server via the URL.
-    //alert('fillDept');
-    program = thisForm.p_programme.value.substr(thisForm.p_programme.value.indexOf("|") + 1, thisForm.p_programme.value.lastIndexOf("|") - (thisForm.p_programme.value.indexOf("|") + 1));
-    term = thisForm.p_termcode.value;
-    url = servicePath + 'hwzkclof.p_getDept?pProgram=' + program + '&pTerm=' + escape(term);
-    //alert(url);
-    makeRequest(url, frmObj, 'fillDept');
-}
-////////////////////////////////////////
-function getModeEntry(thisForm, servicePath) {
-    //alert('getModeEntry');
-    fillModes(thisForm.p_mode_entry, thisForm, servicePath);
-}
-
-function fillModes(frmObj, thisForm, servicePath) {
-    // This function executes the makeRequest function that 
-    // connects to the server via the URL.
-    term = thisForm.p_termcode.value;
-    program = thisForm.p_programme.value.substr(thisForm.p_programme.value.indexOf("|") + 1, thisForm.p_programme.value.lastIndexOf("|") - (thisForm.p_programme.value.indexOf("|") + 1));
-    url = servicePath + 'hwzkclof.p_getModeEntry?pTerm=' + escape(term) + '&pProgram=' + program;
-    //alert(url);
-    makeRequest(url, frmObj, 'retrieveOptions');
-}
-////////////////////////////////////////
-function getAltModeEntry(thisForm, servicePath) {
-    //alert('getAltModeEntry');
-    fillAltModes(thisForm.p_altmode_altentry, thisForm, servicePath);
-}
-
-function fillAltModes(frmObj, thisForm, servicePath) {
-    // This function executes the makeRequest function that 
-    // connects to the server via the URL.
-    term = thisForm.p_termcode.value;
-    program = thisForm.p_altprogramme.value.substr(thisForm.p_altprogramme.value.indexOf("|") + 1, thisForm.p_altprogramme.value.lastIndexOf("|") - (thisForm.p_altprogramme.value.indexOf("|") + 1));
-    url = servicePath + 'hwzkclof.p_getModeEntry?pTerm=' + escape(term) + '&pProgram=' + program;
-    //alert(url);
-    makeRequest(url, frmObj, 'retrieveOptions');
-}
-
 
 
 
