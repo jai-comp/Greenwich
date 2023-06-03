@@ -162,6 +162,7 @@ function loadPageRO() {
     //disableFld("szrclof_other_quals");
     disableFld("szrclof_nationality");
     disableFld("szrclof_transcripts");
+	disableFld("szrclof_visa_req");
     //disableFld("szrclof_intlass");
     disableFld("szrclof_ioassd");
     disableFld("szrclof_decision");
@@ -207,6 +208,7 @@ function loadPage() {
     //disableFld("szrclof_other_quals");
     disableFld("szrclof_nationality");
     disableFld("szrclof_transcripts");
+	disableFld("szrclof_visa_req");
     //disableFld("szrclof_intlass");
     disableFld("szrclof_ioassd");
     disableFld("szrclof_decision");
@@ -291,6 +293,7 @@ function operatorAccess() {
         //enableFld("szrclof_other_quals");
         enableFld("szrclof_nationality");
         enableFld("szrclof_transcripts");
+	    enableFld("szrclof_visa_req");
         //enableFld("szrclof_intlass");
         enableFld("szrclof_decision");
         enableFld("password");
@@ -318,6 +321,7 @@ function superuserAccess() {
     //enableFld("szrclof_other_quals");
     enableFld("szrclof_nationality");
     enableFld("szrclof_transcripts");
+	enableFld("szrclof_visa_req");
     //enableFld("szrclof_intlass");
     enableFld("szrclof_ioassd");
     enableFld("szrclof_decision");
@@ -468,24 +472,10 @@ function validateClearing(thisForm) {
     thisForm.p_actual_mobno.value = thisForm.p_szrclof_mobno.value;
     thisForm.p_actual_tariff.value = thisForm.p_szrclof_tariff.value;
     thisForm.p_actual_nationality.value = thisForm.p_szrclof_nationality.value;
-    //thisForm.p_actual_qual.value = thisForm.p_qual.value;
-    //thisForm.p_actual_intlass.value = thisForm.p_szrclof_intlass.value;
-    //if (thisForm.p_szrclof_other_quals.checked == true) {
-    //    thisForm.p_actual_other_quals.value = 'Y';
-    //} else {
-    //    thisForm.p_actual_other_quals.value = 'N';
-    //}
+
     thisForm.p_actual_transcripts.value = thisForm.p_szrclof_transcripts.value;
-    //if (thisForm.p_szrclof_transcripts.checked == true) {
-    //    thisForm.p_actual_transcripts.value = 'Y';
-    //} else {
-    //    thisForm.p_actual_transcripts.value = 'N';
-    //}
-    //if (thisForm.p_szrclof_intlass.checked == true) {
-    //    thisForm.p_actual_intlass.value = 'Y';
-    //} else {
-    //    thisForm.p_actual_intlass.value = 'N';
-    //}
+	thisForm.p_actual_visa_req.value = thisForm.p_szrclof_visa_req.value;
+    
     if (thisForm.p_szrclof_ioassd.checked == true) {
         thisForm.p_actual_ioassd.value = "Y";
     } else {
@@ -534,11 +524,7 @@ function validateClearing(thisForm) {
                 }
             }
 
-            //if ((thisForm.p_password.value.length > 0) && (thisForm.p_password.value.toUpperCase() != password)) {
-            //alert("Supervisor Password is incorrect!");
-            //thisForm.p_password.focus();
-            //return false;
-            //}
+
 
             return true;
         }
