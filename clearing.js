@@ -543,7 +543,7 @@ function validateClearing(thisForm) {
             return true;
         }
     } else if (thisForm.p_btn_value.value == "Process Decision") {
-        //alert("Process Decision");
+        //alert("Process Decision 3");
    
 	// check that personal ID and decision are compatible TM AD-15 - 9999999999 must have decision code 7
         //alert (thisForm.p_szrclof_personalid.value);
